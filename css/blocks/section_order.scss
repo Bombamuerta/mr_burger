@@ -1,0 +1,276 @@
+// form
+.section-form {
+    background-image: url(/img/chalkboard_formbg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    @include tablets {
+        width: 100vw;
+        height: 100vh;
+    }
+    @include phones {
+        height: 100vh;
+        width: 100vw;
+    }
+}
+
+.section-form__wrapper {
+    margin: 0 auto;
+    width: rem(940px);
+    @include tablets {
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.form-header {
+    cursor: default;
+    color: #f9b43b;
+    font-family: 'Gagalin';
+    font-size: rem(72px);
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: rem(44px);
+    @include phones {
+        font-size: rem(50px);
+        text-align: center;
+        padding-bottom: 0;
+    }
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    @include tablets {
+        width: 50%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    @include phones {
+        justify-content: center;
+        width: 95%;
+    }
+}
+
+.form-left {
+    width: rem(460px);
+}
+
+.form-left__row {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    padding-bottom: rem(19px);
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-right: rem(19px);
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.checkbox__text,
+.label__title {
+    color: #fff;
+    font-family: 'Ubuntu';
+    font-size: rem(14px);
+    font-weight: 300;
+    padding-bottom: rem(7px);
+}
+
+.label__input {
+    width: 100%;
+    border-radius: rem(5px);
+    border: solid rem(1px) #d1cfcb;
+    height: rem(36px);
+    outline: none;
+    font-family: 'Ubuntu';
+    font-size: rem(14px);
+    font-weight: 300;
+    padding: 0 rem(20px);
+    &:focus {
+        border: solid rem(2px) #f9b43b;
+    }
+}
+
+.form-right {
+    width: rem(460px);
+    display: flex;
+    flex-direction: column;
+}
+
+.label__comment {
+    height: rem(115px);
+    border: rem(1px) solid #d1cfcb;
+    border-radius: rem(5px);
+    outline: none;
+    font-family: 'Ubuntu';
+    font-size: rem(14px);
+    font-weight: 300;
+    padding: rem(12px) rem(20px);
+    resize: none;
+    &:focus {
+        border: solid rem(2px) #f9b43b;
+    }
+}
+
+.label--textarea {
+    padding-bottom: rem(18px);
+}
+
+.form-rigth__btn {
+    display: flex;
+    justify-content: flex-start;
+    width: rem(200px);
+    align-items: center;
+    font-family: 'Ubuntu';
+    font-size: rem(14px);
+    font-weight: 300;
+    @include phones {
+        justify-content: center;
+        margin: auto;
+    }
+}
+
+.reset-btn {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-left: rem(20px);
+}
+
+/* radio yes/no */
+
+.form-right__radio {
+    display: flex;
+    @include phones {
+        justify-content: center;
+    }
+}
+
+.radio {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: rem(25px);
+}
+
+.radio__input {
+    opacity: 0;
+}
+
+.radio__input:checked+.radio__custom:before {
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.radio__custom {
+    display: block;
+    position: absolute;
+    left: 0;
+    border-radius: 50%;
+    width: rem(16px);
+    height: rem(16px);
+    background-color: #fff;
+}
+
+.radio__custom::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: rem(8px);
+    height: rem(8px);
+    border-radius: 50%;
+    background-color: #e35028;
+    top: rem(4px);
+    left: rem(4px);
+    opacity: 0;
+}
+
+.radio__title {
+    color: #fff;
+    font-family: 'Ubuntu';
+    font-size: rem(14px);
+    font-weight: 300;
+    padding-left: rem(10px);
+    padding-right: rem(10px);
+}
+
+.form-right__bottom {
+    display: flex;
+    margin-bottom: rem(15px);
+    @include phones {
+        justify-content: center;
+    }
+}
+
+.checkbox {
+    position: relative;
+    display: flex;
+}
+
+.checkbox__text {
+    color: #fff;
+    font-family: 'Ubuntu';
+    font-size: rem(14px);
+    font-weight: 300;
+    padding-left: rem(10px);
+}
+
+.checkbox__input {
+    opacity: 0;
+}
+
+.checkbox__input:checked+.checkbox__custom:before {
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.checkbox__custom {
+    display: block;
+    position: absolute;
+    width: rem(16px);
+    height: rem(16px);
+    background-color: #fff;
+    left: 0;
+    top: 0;
+}
+
+.checkbox__custom::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: rem(5px);
+    height: rem(10px);
+    border: solid $orange;
+    border-width: 0 rem(3px) rem(3px) 0;
+    transform: rotate(45deg);
+    top: 0;
+    left: rem(4px);
+    opacity: 0;
+}
+
+.error {
+    color: red;
+}

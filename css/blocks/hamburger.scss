@@ -1,0 +1,70 @@
+// меню для мобил и планшетов
+.hamburger-container {
+  width: rem(24px);
+  height: rem(24px); // border: 1px solid rgb(167, 33, 33);
+  cursor: pointer;
+  margin-right: 25px;
+  margin-left: 25px;
+}
+
+.hamburger {
+  // display: none;
+  position: absolute;
+  top: 7px;
+  left: -2px;
+  @include tablets {
+    position: relative;
+    display: block;
+    width: rem(24px);
+    height: rem(4px);
+    border-radius: rem(2px);
+    background-color: #fff;
+    &::before {
+      bottom: 100%;
+      margin-bottom: rem(4px);
+      position: absolute;
+      display: block;
+      content: '';
+      width: rem(24px);
+      height: rem(4px);
+      border-radius: rem(2px);
+      background-color: #fff;
+      @include tablets {
+        bottom: 100%;
+        margin-bottom: 5px;
+        position: absolute;
+        display: block;
+        content: '';
+        width: 1.5rem;
+        height: 4px;
+        border-radius: 0.125rem;
+        background-color: #fff;
+      }
+      @include phones {
+        height: 4px;
+        margin-bottom: 4px;
+      }
+    }
+    &::after {
+      position: absolute;
+      display: block;
+      content: '';
+      width: rem(24px);
+      height: rem(4px);
+      border-radius: rem(2px);
+      background-color: #fff;
+      top: 100%;
+      margin-top: rem(5px);
+    }
+    @include tablets {
+      display: block;
+      margin-right: 5%;
+      margin-left: 3%;
+    }
+    @include phones {
+      margin-right: 5%;
+      margin-left: 5%;
+      height: 4px;
+    }
+  }
+}

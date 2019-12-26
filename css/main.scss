@@ -1,0 +1,44 @@
+// colors
+$orange: #e45028;
+$yellow: #f9b43b;
+$grey: #2f3234;
+
+// PX to REM convert function
+@function rem($px) {
+    @return $px / 16px+0rem;
+}
+
+// breakpoints
+$tablets: 768px;
+$phones: 480px;
+// mixin
+@mixin tablets {
+    @media (max-width: $tablets) {
+        @content;
+    }
+}
+
+@mixin phones {
+    @media (max-width: $phones) {
+        @content;
+    }
+}
+
+// blocks import
+@import 'layout/normalize.scss';
+@import 'layout/fonts.scss';
+@import 'blocks/section_burger.scss';
+@import 'blocks/section_best.scss';
+@import 'blocks/section_slider.scss';
+@import 'blocks/popup.scss';
+@import 'blocks/section_team.scss';
+@import 'blocks/section_menu.scss';
+@import 'blocks/section_photo.scss';
+@import 'blocks/section_video.scss';
+@import 'blocks/section_order.scss';
+@import 'blocks/section_map.scss';
+@import 'blocks/pagination.scss';
+@import 'blocks/hamburger.scss';
+@import 'blocks/hidden-menu.scss';
+@import 'blocks/review_popup.scss';
+@import 'layout/onepage-scroll.scss';

@@ -1,0 +1,171 @@
+.section-menu {
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    margin: 0;
+    background-image: url(/img/menu-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    @include tablets {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    @include phones {
+        height: 100vh;
+        width: 100vw;
+        min-height: 100%;
+    }
+}
+
+.burgers-header {
+    position: absolute;
+    top: rem(50px);
+    left: rem(50px);
+    margin: 0;
+    color: #fff;
+    font-family: 'Gagalin', 'Helvetica', 'sans-serif';
+    font-size: rem(72px);
+    font-weight: 400;
+
+    @include phones {
+        padding-top: rem(59px);
+        padding-left: 0;
+        font-size: rem(50px);
+        width: rem(120px);
+        height: rem(36px);
+        margin: 0;
+        margin-left: 2%;
+    }
+}
+
+.burgers {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    
+    @include tablets {
+        height: 100vh;
+        width: 50%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+.burgers__item {
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+}
+
+
+
+.burgers__title {
+    height: 100vh;
+    width: rem(60px);
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+    @include tablets {
+        // transform: rotate(-90deg) translateX(-1250%);
+        font-size: rem(40px);
+    }
+
+    @include phones {
+        // transform: rotate(-90deg) translateX(-710%);
+    }
+}
+
+
+
+.burgers__title--meat {
+    background-image: url(/img/menu-slide1.png);
+   
+}
+
+.burgers__title--vegan {
+    background-image: url(/img/menu-slide2.png);
+}
+
+.burgers__title--diet {
+    background-image: url(/img/menu-slide3.png);
+}
+
+.burgers__title-text {
+    font-family: 'Gagalin', 'Helvetica', 'sans-serif';
+    font-size: rem(40px);
+    font-weight: 400;
+    transform: rotate(-90deg) translateX(-740%);
+    display: block;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.burgers__desc {
+    transition: .3s;
+    width: 0;
+    background-color: rgba(47, 50, 52, 0.929);
+    color: #fff;
+    height: 100vh;
+    padding: 0;
+    
+    @include tablets {
+       
+    }
+    @include phones {
+        width: 0;
+    }
+  
+
+}
+
+.burgers__desc-text {
+    color: #fff;
+    font-family: 'Ubuntu', 'Helvetica', 'sans-serif';
+    font-size: rem(14px);
+    font-weight: 300;
+    line-height: rem(24px);
+    padding: rem(35px);
+    opacity: 0;
+    transition: .1s;
+    @include phones {
+       
+    }
+
+}
+
+.burgers__item--active .burgers__title {
+    color: #f9b43b;
+}
+
+.burgers__item--active .burgers__desc {
+    width: rem(540px);
+    transition: .3s;
+    background-color: rgba(#2f3234, .7);
+    @include tablets {
+        width: 543px;
+    }
+    @include phones {
+        width: 15.75rem;
+    }
+    
+}
+.burgers__item--active .burgers__desc-text {
+    opacity: 1;
+    transition: 0.8s;
+}
+   

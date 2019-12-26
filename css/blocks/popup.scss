@@ -1,0 +1,33 @@
+.popup {
+    width: rem(90px);
+    height: rem(90px);
+    background-color: #fff;
+    border-radius: 5px;
+    opacity: 0;
+    color: #2f3234;
+    font-family: 'Ubuntu';
+    font-size: rem(14px);
+    font-weight: 500;
+    line-height: rem(24px);
+    padding: rem(20px);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.popup__list {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.popup__item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup__name {
+    margin-left: rem(10px);
+}
