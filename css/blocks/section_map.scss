@@ -1,136 +1,141 @@
 .section-map {
-    width: 100%;
-    height: 100%;
-    min-height: 600px;
-    background-image: url(/img/chalkboard_formbg.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    @include tablets {
-        width: 100vw;
-        height: 100vh;
-    }
-    @include phones {
-        height: 100vh;
-        width: 100vw;
-    }
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  background-image: url(/img/chalkboard_formbg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+
+  @include tablets {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  @include phones {
+    height: 100vh;
+    width: 100vw;
+  }
 }
 
 .map {
-    height: 100%;
-    width: 100%;
-    @include tablets {
-        background-position: center;
-    }
-    @include phones {
-        background-position: center;
-    }
+  height: 100%;
+  width: 100%;
+
+  @include tablets {
+    background-position: center;
+  }
+
+  @include phones {
+    background-position: center;
+  }
 }
 
 .footer {
-    height: rem(60px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: rem(940px);
-    margin: auto;
-    @include tablets {
-        padding-right: rem(5px);
-        padding-left: rem(25px);
-        width: 100%;
-    }
-    @include phones {
-        flex-direction: column;
-        height: rem(103px);
-        flex-direction: column;
-        width: 100%;
-        padding-top: 3%;
-        padding-left: 0;
-        padding-right: 0;
-    }
+  height: rem(60px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: rem(940px);
+  margin: auto;
+
+  @include tablets {
+    padding-right: rem(5px);
+    padding-left: rem(25px);
+    width: 100%;
+  }
+
+  @include phones {
+    flex-direction: column;
+    height: rem(103px);
+    flex-direction: column;
+    width: 100%;
+    padding-top: 3%;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .contacts {
-    font-family: Ubuntu;
-    font-size: rem(14px);
-    font-style: normal;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    @include phones {
-        align-items: center;
-    }
+  font-family: Ubuntu;
+  font-size: rem(14px);
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include phones {
+    align-items: center;
+  }
 }
 
 .contacts__address {
-    font-weight: 300;
-    color: #fff;
-    cursor: default;
-    padding-bottom: rem(5px);
+  font-weight: 300;
+  color: #fff;
+  cursor: default;
+  padding-bottom: rem(5px);
 }
 
 .phone {
-    font-weight: bold;
-    color: #e45028;
-    position: relative;
-    cursor: pointer;
+  font-weight: bold;
+  color: #e45028;
+  position: relative;
+  cursor: pointer;
 }
 
 .socials {
-    @include phones {
-        margin: 0;
-        margin: 0;
-        margin-left: 15px;
-        padding-bottom: 8px;
-    }
+  @include phones {
+    margin: 0;
+    margin: 0;
+    margin-left: 15px;
+    padding-bottom: 8px;
+  }
 }
 
 .socials__list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
 }
 
 .socials__item {
-    margin-right: rem(20px);
+  margin-right: rem(20px);
 }
 
 .socials__link {
-    align-content: center;
+  align-content: center;
 }
 
 .vk-icon,
 .fb-icon,
 .inst-icon,
 .twitter-icon {
-    fill: #5a5a5a;
-    &:hover {
-        transition: .3s;
-        fill: #fff;
-    }
+  fill: #5a5a5a;
+  &:hover {
+    transition: 0.3s;
+    fill: #fff;
+  }
 }
 
 .phone-icon {
-    margin-top: rem(1px);
+  margin-top: rem(1px);
 }
 
 .map-hint {
-    font-family: 'Ubuntu';
-    font-size: 18px;
-    font-weight: bold;
-    color: #000;
-    border-radius: 5px;
-    height: 20px;
-    
+  font-family: 'Ubuntu';
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  border-radius: 5px;
+  height: 20px;
 }
+
 .map-balloon {
-    font-family: 'Ubuntu';
-    font-size: 15px;
-    color: #000;
-    height: 50px;
+  font-family: 'Ubuntu';
+  font-size: 15px;
+  color: #000;
+  height: 50px;
 }
-    
-    

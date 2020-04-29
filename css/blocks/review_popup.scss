@@ -1,77 +1,75 @@
 .overlay {
-    display: none;
+  display: none;
 }
 
 .overlay--active {
+  display: block;
+  background-color: rgba($color: #2f3234, $alpha: 0.5);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @include tablets {
     display: block;
-    background-color: rgba($color: #2f3234, $alpha: .5);
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
+  }
 
-    @include tablets {
-        display: block;
-    }
-
-    @include phones {
-        display: block;
-    }
+  @include phones {
+    display: block;
+  }
 }
 
-
 .review-popup {
-    width: rem(460px);
-    height: rem(254px);
-    background-color: #fff;
-    border-radius: rem(5px);
-    border: 1px solid #000;
-    padding: rem(30px) rem(20px);
-    position: relative;
-    margin: auto;
-    top: 30%;
-    
-    @include phones{
-        width: 24.75rem;
-    }
+  width: rem(460px);
+  height: rem(254px);
+  background-color: #fff;
+  border-radius: rem(5px);
+  border: 1px solid #000;
+  padding: rem(30px) rem(20px);
+  position: relative;
+  margin: auto;
+  top: 30%;
 
+  @include phones {
+    width: 24.75rem;
+  }
 }
 
 .review-popup__header {
-    color: #2f3234;
-    font-family: 'Gagalin';
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 28.11px;
+  color: #2f3234;
+  font-family: 'Gagalin';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28.11px;
 }
 
 .review-popup__text {
-    color: #2f3234;
-    font-family: 'Ubuntu';
-    font-size: rem(14px);
-    font-weight: 300;
-    line-height: rem(24px);
+  color: #2f3234;
+  font-family: 'Ubuntu';
+  font-size: rem(14px);
+  font-weight: 300;
+  line-height: rem(24px);
 }
 
 .red-cross {
-    position: absolute;
-    top: rem(20px);
-    right: rem(30px);
+  position: absolute;
+  top: rem(20px);
+  right: rem(30px);
+  width: 5px;
+  height: 20px;
+  border-radius: 3px;
+  background-color: #e45028;
+  transform: rotate(45deg);
+  cursor: pointer;
+
+  &::before {
+    display: block;
+    content: '';
     width: 5px;
     height: 20px;
     border-radius: 3px;
     background-color: #e45028;
-    transform: rotate(45deg);
-    cursor: pointer;
-
-    &::before {
-        display: block;
-        content: '';
-        width: 5px;
-        height: 20px;
-        border-radius: 3px;
-        background-color: #e45028;
-        transform: rotate(90deg);
-    }
+    transform: rotate(90deg);
+  }
 }

@@ -1,28 +1,23 @@
 $(document).ready(function () {
-  initTabMenu();
-});
+  initTabMenu()
+})
 
 function initTabMenu() {
-
-  var items = $('.burgers__item'); // элементы (li-шки)
-  var titleBtn = $('.burgers__title'); // нажимать будем сюда
-  var classItemActiv = 'burgers__item--active'; //класс который будет добавлен
+  var items = $('.burgers__item')
+  var titleBtn = $('.burgers__title')
+  var classItemActiv = 'burgers__item--active'
 
   titleBtn.click(function (e) {
-    e.preventDefault(); //отключение действия по умолчанию
+    e.preventDefault()
 
-    var self = $(this);
-    var parrent = self.parents('.burgers__item'); //получаем родительский блок
+    var self = $(this)
+    var parrent = self.parents('.burgers__item')
 
-    //проверка активного класса
-    if (parrent.hasClass(classItemActiv)){
-      //если активный то удаляем (блок закрывается)
+    if (parrent.hasClass(classItemActiv)) {
       parrent.removeClass(classItemActiv)
     } else {
-      //все лишки закрываем
-      items.removeClass(classItemActiv);
-      //открываем нужную
-      parrent.addClass(classItemActiv);
+      items.removeClass(classItemActiv)
+      parrent.addClass(classItemActiv)
     }
   })
 }

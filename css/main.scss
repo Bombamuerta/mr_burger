@@ -1,4 +1,3 @@
-// colors
 $orange: #e45028;
 $yellow: #f9b43b;
 $grey: #2f3234;
@@ -8,10 +7,9 @@ $grey: #2f3234;
     @return $px / 16px+0rem;
 }
 
-// breakpoints
 $tablets: 768px;
 $phones: 480px;
-// mixin
+
 @mixin tablets {
     @media (max-width: $tablets) {
         @content;
@@ -24,7 +22,6 @@ $phones: 480px;
     }
 }
 
-// blocks import
 @import 'layout/normalize.scss';
 @import 'layout/fonts.scss';
 @import 'blocks/section_burger.scss';

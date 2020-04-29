@@ -1,317 +1,334 @@
-
-
-
-
 .section-slider {
-    width: 100%;
-    height: 100%;
-    min-height: 600px;
-    background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    @include phones {
-        width: 100vw;
-        height: 100vh;
-    }
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  background-image: linear-gradient(
+    to top,
+    #f9b43b 0%,
+    #eb8c38 48%,
+    #f9b43b 74%,
+    #f9b43b 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  @include phones {
+    width: 100vw;
+    height: 100vh;
+  }
 }
+
 .slider {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @include tablets {
-        width: 100vw;
-        height: 100vh;
-    }
-    @include phones {
-        width: 100vw;
-        height: 100vh;
-    }
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include tablets {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  @include phones {
+    width: 100vw;
+    height: 100vh;
+  }
 }
 
 .slider__button {
-   cursor: pointer;
-   position: absolute;
-   top: 50%;
-
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
 }
 
 .slider__button--prev {
-    transform: rotate(90deg);
-    left: 5%;
-    @include phones {
-        left: 0;
-    }
+  transform: rotate(90deg);
+  left: 5%;
+
+  @include phones {
+    left: 0;
+  }
 }
 
 .slider__button--next {
-    transform: rotate(-90deg);
-    right: 5%;
-    @include phones {
-        right: 0;
-    }
+  transform: rotate(-90deg);
+  right: 5%;
+
+  @include phones {
+    right: 0;
+  }
 }
 .slider__content {
-    top: 25%;
-    height: 100%;
-    left: 0;
-    width: rem(930px);
-    overflow: hidden;
-    position: relative;
-    @include tablets {
-        width: 79vw;
-        height: 100vh;
-        top: 0;
-    }
-    @include phones {
-        width: 100vw;
-        height: 100vh;
-        top: 0;
-    }
-}
-.slider__list {
-    white-space: nowrap;
-    font-size: 0;
-    padding: 0;
-    position: absolute;
-    left: 0;
+  top: 25%;
+  height: 100%;
+  left: 0;
+  width: rem(930px);
+  overflow: hidden;
+  position: relative;
+
+  @include tablets {
+    width: 79vw;
+    height: 100vh;
     top: 0;
-    @include tablets {
-        top: 200px;
-    }
-    @include phones {
-        top:0;
-    }
+  }
+
+  @include phones {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+  }
+}
+
+.slider__list {
+  white-space: nowrap;
+  font-size: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  @include tablets {
+    top: 200px;
+  }
+
+  @include phones {
+    top: 0;
+  }
 }
 
 .slider-container__item {
-    width: rem(930px);
-    height: rem(480px);
-    display: inline-block;
-    @include tablets {
-        width: rem(650px);
-        height: rem(772px);
-    }
-    @include phones {
-        width: 100vw;
-    }
+  width: rem(930px);
+  height: rem(480px);
+  display: inline-block;
+
+  @include tablets {
+    width: rem(650px);
+    height: rem(772px);
+  }
+
+  @include phones {
+    width: 100vw;
+  }
 }
 
 .slider-container__item-wrapper {
-    display: flex;
-    @include tablets {
-        flex-direction: column;
-        height: 800px;
-    }
-    @include phones {
-        width: 100px;
-    }
+  display: flex;
+
+  @include tablets {
+    flex-direction: column;
+    height: 800px;
+  }
+
+  @include phones {
+    width: 100px;
+  }
 }
 
-// левая часть (картинка, состав, ккал)
 .slider-container__left {
-    position: relative;
-    @include tablets {
-        width: 600px;
-       text-align: center;
-    }
-    @include phones {
-        width: 345px;
-        top: 100px;
-        left: 13px;
-    }
-        
+  position: relative;
+
+  @include tablets {
+    width: 600px;
+    text-align: center;
+  }
+
+  @include phones {
+    width: 345px;
+    top: 100px;
+    left: 13px;
+  }
 }
 
-// правая часть (название бургера, описание, цена+заказ)
 .slider-container__right {
-    position: relative;
-    white-space: normal;
-    
-    @include tablets {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 600px;
-    }
-    @include phones {
-        width: 325px;
-        top: 100px;
-        left: 25px;
-    }   
-        
-}
+  position: relative;
+  white-space: normal;
 
-// главная картинка бургера
-.slider-container__pic {
-    max-width: rem(505px);
-    max-height: rem(329px);
-    margin: auto ;
-    @include phones {
-        width: 17.25rem;
-        height: rem(200px);
-    }
-}
-
-// состав
-.composition {
-    width: rem(90px);
-    height: rem(90px);
-    border-radius: rem(5px);
-    background-color: #f08c33;
+  @include tablets {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    width: 600px;
+  }
+
+  @include phones {
+    width: 325px;
+    top: 100px;
+    left: 25px;
+  }
+}
+
+.slider-container__pic {
+  max-width: rem(505px);
+  max-height: rem(329px);
+  margin: auto;
+
+  @include phones {
+    width: 17.25rem;
+    height: rem(200px);
+  }
+}
+
+.composition {
+  width: rem(90px);
+  height: rem(90px);
+  border-radius: rem(5px);
+  background-color: #f08c33;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &:hover .popup {
+    opacity: 0.9;
+    width: rem(270px);
+    height: rem(332px);
+    left: rem(90px);
+    top: 0;
+  }
+
+  @include tablets {
+    width: rem(90px);
+    height: rem(90px);
+    position: absolute;
+    top: -72px;
+  }
+
+  @include phones {
+    position: absolute;
+    top: -62px;
+    left: 1.25rem;
+    width: 69px;
+    height: 77px;
     &:hover .popup {
-        opacity: 0.9;
-        width: rem(270px);
-        height: rem(332px);
-        left: rem(90px);
-        top: 0;
+      z-index: 10;
+      left: 4.625rem;
     }
-    @include tablets {
-        width: rem(90px);
-        height: rem(90px);
-        position: absolute;
-        top: -72px;
-    }
-    @include phones {
-        position: absolute;
-        top: -62px;
-        left: 1.25rem;
-        width: 69px;
-        height: 77px;
-        &:hover .popup {
-            z-index: 10;
-            left: 4.625rem;
-            
-            
-        }
-    }
+  }
 }
 
 .burger-icon {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .composition__title {
-    color: #fff;
-    font-family: 'Gagalin';
-    font-size: rem(14px);
-    font-weight: 400;
-    line-height: rem(28.11px);
+  color: #fff;
+  font-family: 'Gagalin';
+  font-size: rem(14px);
+  font-weight: 400;
+  line-height: rem(28.11px);
 }
 
-// каллории
 .kkal {
-    position: absolute;
-    bottom: 0;
-    left: rem(14px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    @include tablets {
-        top: -68px;
-        height: 85px;
-        width: 80px;
-        left: 500px;
-    }
-    @include phones {
-        top: -61px;
-        left: 257px;
-    }
+  position: absolute;
+  bottom: 0;
+  left: rem(14px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include tablets {
+    top: -68px;
+    height: 85px;
+    width: 80px;
+    left: 500px;
+  }
+
+  @include phones {
+    top: -61px;
+    left: 257px;
+  }
 }
 
 .kkal-icon {
-    fill: #f9d19c;
+  fill: #f9d19c;
 }
 
 .kkal__number {
-    font-family: Gagalin;
-    font-size: rem(20px);
-    font-weight: 400;
-    line-height: rem(24px);
-    color: #f9d19c;
+  font-family: Gagalin;
+  font-size: rem(20px);
+  font-weight: 400;
+  line-height: rem(24px);
+  color: #f9d19c;
+  position: absolute;
+  top: rem(25px);
+
+  @include tablets {
     position: absolute;
-    top: rem(25px);
-    @include tablets {
-        position: absolute;
-        top: rem(28px);
-    }
+    top: rem(28px);
+  }
 }
 
 .kkal__title {
-    font-size: rem(14px);
-    font-family: 'Gagalin';
-    font-weight: 400;
-    line-height: rem(24px);
-    color: #f9d19c;
+  font-size: rem(14px);
+  font-family: 'Gagalin';
+  font-weight: 400;
+  line-height: rem(24px);
+  color: #f9d19c;
 }
 
-// название бургера
 .slider-info {
-    color: #fff;
-    font-family: 'Gagalin';
-    font-size: rem(72px);
-    font-weight: 400;
-    line-height: rem(63.93px);
-    width: rem(350px);
-    margin-bottom: 2.5rem;
-    margin-top: 40px;
-    @include tablets {
-        text-align: center;
-    }
-    @include phones {
-        font-size: rem(50px);
-        margin-top: 0;
-        margin-bottom: 0;
-        line-height: 1;
-    }
+  color: #fff;
+  font-family: 'Gagalin';
+  font-size: rem(72px);
+  font-weight: 400;
+  line-height: rem(63.93px);
+  width: rem(350px);
+  margin-bottom: 2.5rem;
+  margin-top: 40px;
+
+  @include tablets {
+    text-align: center;
+  }
+
+  @include phones {
+    font-size: rem(50px);
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1;
+  }
 }
 
-// описание бургера
 .slider-info__text {
-    color: #fff;
-    font-family: 'Ubuntu';
-    font-size: rem(14px);
-    font-weight: 300;
-    line-height: rem(23.97px);
-    margin-bottom: rem(36px);
-    @include tablets {
-        text-align: center;
-        width: rem(564px);
-    }
-    @include phones {
-        width: rem(314px);
-        margin: 0;
-    }
+  color: #fff;
+  font-family: 'Ubuntu';
+  font-size: rem(14px);
+  font-weight: 300;
+  line-height: rem(23.97px);
+  margin-bottom: rem(36px);
+
+  @include tablets {
+    text-align: center;
+    width: rem(564px);
+  }
+
+  @include phones {
+    width: rem(314px);
+    margin: 0;
+  }
 }
 
-// цена
 .slider-info__price {
-    font-size: rem(72px);
-    letter-spacing: rem(-1.79px);
+  font-size: rem(72px);
+  letter-spacing: rem(-1.79px);
+  color: #e35028;
+  font-family: 'Gagalin';
+  margin-right: rem(29px);
+  
+  &::after {
+    content: 'рублей';
+    letter-spacing: rem(-0.75px);
     color: #e35028;
     font-family: 'Gagalin';
-    margin-right: rem(29px);
-    &::after {
-        content: 'рублей';
-        letter-spacing: rem(-0.75px);
-        color: #e35028;
-        font-family: 'Gagalin';
-        font-size: rem(30px);
-        font-weight: 400;
-        line-height: rem(28.08px);
-    }
+    font-size: rem(30px);
+    font-weight: 400;
+    line-height: rem(28.08px);
+  }
 }
 
 .slider-info__order {
-    display: flex;
-    align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
 }
